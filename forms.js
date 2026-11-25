@@ -35,12 +35,8 @@ if (form) {
     submit.textContent = "Sending…";
     try {
       const payload = Object.fromEntries(new FormData(form).entries());
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      if (!response.ok) throw new Error("The server could not accept the enquiry.");
+      if (payload.website) { throw new Error("spam"); }
+      await fetch(endpoint, { method: "POST", mode: "no-cors", body: new URLSearchParams(payload) });
       form.reset();
       setLeadType(typeInput.value || "buyer");
       status.className = "form-status";

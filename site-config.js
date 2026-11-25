@@ -1,9 +1,4 @@
-/*
-  UdyogSetu lead form configuration.
-  Keep public frontend configuration here only. NEVER put a Supabase service-role key,
-  database password, or other secret in browser code.
-  Set leadEndpoint to your secure server/Edge Function URL after backend setup.
-*/
+/* Public front-end configuration only. */
 window.UDYOGSETU_CONFIG = {
-  leadEndpoint: ""
+  leadEndpoint: "https://script.google.com/macros/s/AKfycbzthdDCqDGyxNfETTR6h1itD6quSiYvKrwvUR5VHllAdHtQ65K6pqMGMrnYS208M3FMZg/exec"
 };
