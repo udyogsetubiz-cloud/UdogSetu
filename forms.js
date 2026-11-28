@@ -11,8 +11,8 @@ if (form) {
     tabs.forEach(btn => btn.setAttribute("aria-pressed", String(btn.dataset.leadType === type)));
     sellerOnly.forEach(el => el.hidden = type !== "seller");
     buyerOnly.forEach(el => el.hidden = type !== "buyer");
-    form.querySelector("#formHeading").textContent = type === "seller" ? "Tell us about your business" : "Tell us what you want to acquire";
-    form.querySelector("#formIntro").textContent = type === "seller"
+    document.querySelector("#formHeading").textContent = type === "seller" ? "Tell us about your business" : "Tell us what you want to acquire";
+    document.querySelector("#formIntro").textContent = type === "seller"
       ? "Share a few initial details. Our team will contact you to understand the opportunity."
       : "Tell us about your acquisition or investment requirement. Our team will get in touch.";
     status.style.display = "none";
